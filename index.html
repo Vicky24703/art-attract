@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Attract - Premium Art Delivery</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav-left">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+      <div class="logo">
+        <h1>Art Attract</h1>
+        <p class="tagline">Premium Art Delivered to Your Door</p>
+      </div>
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
+      <div class="nav-right">
+        <ul>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero" style="background-image: url('images/forest_lost.jpeg');">
+      <div class="hero-content">
+        <h2>Transform Your Space with Premium Art</h2>
+        <p>Discover unique pieces from emerging and established artists, delivered directly to your doorstep.</p>
+        <a href="products.html" class="btn btn-primary">Browse Collection</a>
+      </div>
+    </section>
+    <section class="features">
+      <h2>Why Choose Us</h2>
+      <div class="container">
+        <div class="feature">
+          <div class="feature-icon" aria-hidden="true">🖼️</div>
+          <h3>Curated Selection</h3>
+          <p>Handpicked art pieces from talented artists around the world.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon" aria-hidden="true">🚚</div>
+          <h3>Door-to-Door Delivery</h3>
+          <p>Safe and secure delivery right to your doorstep.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon" aria-hidden="true">💯</div>
+          <h3>Satisfaction Guaranteed</h3>
+          <p>Love your art or we'll take it back, no questions asked.</p>
+        </div>
+      </div>
+    </section>
+    <section class="quote-section" style="background-image: url('images/rainy_lights.jpeg');">
+      <div class="quote-content">
+        <blockquote class="quote">"Art enables us to find ourselves and lose ourselves at the same time."</blockquote>
+        <p class="quote-author">— Thomas Merton</p>
+      </div>
+    </section>
+    <section class="featured-products">
+      <div class="container">
+        <h2>Featured Pieces</h2>
+        <div class="products-grid">
+          <article class="product-card">
+            <figure class="product-image">
+              <img src="images/abstract.jpg" alt="Abstract Cityscape">
+            </figure>
+            <div class="product-info">
+              <h3>Abstract Cityscape</h3>
+              <p class="product-description">A vibrant interpretation of urban life through abstract forms and bold colors.</p>
+              <p class="product-price">£149.99</p>
+              <button class="btn btn-secondary" onclick="addToCart()">Add to Cart</button>
+            </div>
+          </article>
+          <article class="product-card">
+            <figure class="product-image">
+              <img src="images/forest_lost.jpeg" alt="Serene Nature">
+            </figure>
+            <div class="product-info">
+              <h3>Serene Nature</h3>
+              <p class="product-description">A calming landscape that brings the peace of nature into your home.</p>
+              <p class="product-price">£129.99</p>
+              <button class="btn btn-secondary" onclick="addToCart()">Add to Cart</button>
+            </div>
+          </article>
+          <article class="product-card">
+            <figure class="product-image">
+              <img src="images/metropolis.jpeg" alt="Urban Dreams">
+            </figure>
+            <div class="product-info">
+              <h3>Urban Dreams</h3>
+              <p class="product-description">A modern take on city life with a dreamlike quality that captivates viewers.</p>
+              <p class="product-price">£179.99</p>
+              <button class="btn btn-secondary" onclick="addToCart()">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <div class="view-all">
+          <a href="products.html" class="btn btn-outline">View All Products</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <h3>Art Attract</h3>
+          <p>Premium art delivered to your door. We connect artists with art lovers around the world.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="Facebook">f</a>
+            <a href="#" class="social-icon" aria-label="Twitter">t</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="cart.html">Cart</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="#">Abstract</a></li>
+              <li><a href="#">Landscape</a></li>
+              <li><a href="#">Portrait</a></li>
+              <li><a href="#">Modern</a></li>
+              <li><a href="#">Photography</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:info@artattract.com">info@artattract.com</a></li>
+              <li><a href="tel:+441234567">+44-123-4567</a></li>
+              <li><a href="#">45 Royal Mile, Edinburgh, EH1 2NG, Scotland, UK</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Art Attract. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLeft = document.querySelector('.nav-left');
+    const navRight = document.querySelector('.nav-right');
+    navToggle.addEventListener('click', function() {
+      navLeft.classList.toggle('active');
+      navRight.classList.toggle('active');
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+    });
+    function addToCart() {
+      alert('Item added to cart!');
+    }
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.pageYOffset;
+      const hero = document.querySelector('.hero');
+      const quoteSection = document.querySelector('.quote-section');
+      if (hero) {
+        hero.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+      }
+      if (quoteSection) {
+        quoteSection.style.backgroundPositionY = (scrollPosition - quoteSection.offsetTop) * 0.5 + 'px';
+      }
+    });
+    document.addEventListener('click', function(event) {
+      if (!navLeft.contains(event.target) && !navRight.contains(event.target) && event.target !== navToggle) {
+        navLeft.classList.remove('active');
+        navRight.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>

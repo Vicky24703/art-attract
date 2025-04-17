@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail - Art Attract</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav-left">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+      <div class="logo">
+        <h1>Art Attract</h1>
+        <p class="tagline">Premium Art Delivered to Your Door</p>
+      </div>
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
+      <div class="nav-right">
+        <ul>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="product-detail-section">
+    <div class="container">
+      <article class="product-detail">
+        <div class="product-gallery">
+          <img src="images/abstract.jpg" alt="Abstract Cityscape">
+        </div>
+        <div class="product-info">
+          <h2>Abstract Cityscape</h2>
+          <p class="product-price">£149.99</p>
+          <p class="product-description">
+            A vibrant interpretation of urban life, "Abstract Cityscape" captures the energy and chaos of the city with bold colors and dynamic forms.
+            This piece is perfect for adding a modern and artistic touch to any living space.
+          </p>
+          <button class="btn btn-secondary" onclick="alert('Item added to cart!')">Add to Cart</button>
+        </div>
+      </article>
+      <section class="product-reviews">
+        <h3>Customer Reviews</h3>
+        <article class="review">
+          <p>"A stunning piece of art that transforms my living room. The colors are so vibrant!"</p>
+          <small>— Alex</small>
+        </article>
+        <article class="review">
+          <p>"I love the modern take on urban landscapes. Truly a conversation starter."</p>
+          <small>— Jamie</small>
+        </article>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <h3>Art Attract</h3>
+          <p>Premium art delivered to your door. We connect artists with art lovers around the world.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="Facebook">f</a>
+            <a href="#" class="social-icon" aria-label="Twitter">t</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="cart.html">Cart</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="#">Abstract</a></li>
+              <li><a href="#">Landscape</a></li>
+              <li><a href="#">Portrait</a></li>
+              <li><a href="#">Modern</a></li>
+              <li><a href="#">Photography</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:info@artattract.com">info@artattract.com</a></li>
+              <li><a href="tel:+441234567">+44-123-4567</a></li>
+              <li><a href="#">45 Royal Mile, Edinburgh, EH1 2NG, Scotland, UK</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Art Attract. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function toggleNav() {
+      const navLeft = document.querySelector('.nav-left');
+      const navRight = document.querySelector('.nav-right');
+      navLeft.classList.toggle('active');
+      navRight.classList.toggle('active');
+    }
+    document.addEventListener('click', function(event) {
+      const navLeft = document.querySelector('.nav-left');
+      const navRight = document.querySelector('.nav-right');
+      const navToggle = document.querySelector('.nav-toggle');
+      if (!navLeft.contains(event.target) &&
+          !navRight.contains(event.target) &&
+          event.target !== navToggle &&
+          (navLeft.classList.contains('active') || navRight.classList.contains('active'))) {
+        navLeft.classList.remove('active');
+        navRight.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

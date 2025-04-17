@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Art Attract</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>  
+  <header>
+    <div class="container">
+      <div class="nav-left">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+      <div class="logo">
+        <h1>Art Attract</h1>
+        <p class="tagline">Premium Art Delivered to Your Door</p>
+      </div>
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
+      <div class="nav-right">
+        <ul>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="products-section">
+    <div class="container">
+      <h2>Our Collection</h2>
+      <div class="filters">
+        <div class="filter-group">
+          <label for="category">Category:</label>
+          <select id="category">
+            <option value="all">All Categories</option>
+            <option value="abstract">Abstract</option>
+            <option value="landscape">Landscape</option>
+            <option value="portrait">Portrait</option>
+            <option value="modern">Modern</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="price">Price Range:</label>
+          <select id="price">
+            <option value="all">All Prices</option>
+            <option value="0-100">£0 - £100</option>
+            <option value="100-200">£100 - £200</option>
+            <option value="200+">£200+</option>
+          </select>
+        </div>
+        <button class="btn btn-outline">Apply Filters</button>
+      </div>
+      <div class="products-grid">
+        <article class="product-card">
+          <figure class="product-image">
+            <img src="images/abstract.jpg" alt="Abstract Cityscape">
+          </figure>
+          <div class="product-info">
+            <h3>Abstract Cityscape</h3>
+            <p class="product-description">A vibrant interpretation of urban life through abstract forms and bold colors.</p>
+            <p class="product-price">£149.99</p>
+            <div class="button-container">
+              <button class="btn btn-secondary" onclick="alert('Item added to cart!')">Add to Cart</button>
+              <a href="product-detail.html?id=001" class="btn btn-outline">View Details</a>
+            </div>              
+          </div>
+        </article>
+        <article class="product-card">
+          <figure class="product-image">
+            <img src="images/forest_lost.jpeg" alt="Serene Nature">
+          </figure>
+          <div class="product-info">
+            <h3>Serene Nature</h3>
+            <p class="product-description">A calming landscape that brings the peace of nature into your home.</p>
+            <p class="product-price">£129.99</p>
+            <div class="button-container">
+              <button class="btn btn-secondary" onclick="alert('Item added to cart!')">Add to Cart</button>
+              <a href="product-detail.html?id=001" class="btn btn-outline">View Details</a>
+            </div>              
+          </div>
+        </article>
+        <article class="product-card">
+          <figure class="product-image">
+            <img src="images/metropolis.jpeg" alt="Urban Dreams">
+          </figure>
+          <div class="product-info">
+            <h3>Urban Dreams</h3>
+            <p class="product-description">A modern take on city life with a dreamlike quality that captivates viewers.</p>
+            <p class="product-price">£179.99</p>
+            <div class="button-container">
+              <button class="btn btn-secondary" onclick="alert('Item added to cart!')">Add to Cart</button>
+              <a href="product-detail.html?id=001" class="btn btn-outline">View Details</a>
+            </div>              
+          </div>
+        </article>
+        <article class="product-card">
+          <figure class="product-image">
+            <img src="images/pattern.jpeg" alt="Geometric Harmony">
+          </figure>
+          <div class="product-info">
+            <h3>Geometric Harmony</h3>
+            <p class="product-description">Precise geometric patterns create a sense of balance and harmony.</p>
+            <p class="product-price">£159.99</p>
+            <div class="button-container">
+              <button class="btn btn-secondary" onclick="alert('Item added to cart!')">Add to Cart</button>
+              <a href="product-detail.html?id=001" class="btn btn-outline">View Details</a>
+            </div>              
+          </div>
+        </article>
+        <article class="product-card">
+          <figure class="product-image">
+            <img src="images/space.jpeg" alt="Coastal Serenity">
+          </figure>
+          <div class="product-info">
+            <h3>Coastal Serenity</h3>
+            <p class="product-description">Bring the calming influence of the ocean into your space with this coastal scene.</p>
+            <p class="product-price">£189.99</p>
+            <div class="button-container">
+              <button class="btn btn-secondary" onclick="alert('Item added to cart!')">Add to Cart</button>
+              <a href="product-detail.html?id=001" class="btn btn-outline">View Details</a>
+            </div>              
+          </div>
+        </article>
+        <article class="product-card">
+          <figure class="product-image">
+            <img src="images/micky.jpeg" alt="Vibrant Expressions">
+          </figure>
+          <div class="product-info">
+            <h3>Vibrant Expressions</h3>
+            <p class="product-description">Bold colors and expressive brushstrokes create a piece full of energy and life.</p>
+            <p class="product-price">£199.99</p>
+            <div class="button-container">
+              <button class="btn btn-secondary" onclick="alert('Item added to cart!')">Add to Cart</button>
+              <a href="product-detail.html?id=001" class="btn btn-outline">View Details</a>
+            </div>              
+          </div>
+        </article>
+      </div>
+      <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">Next</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <h3>Art Attract</h3>
+          <p>Premium art delivered to your door. We connect artists with art lovers around the world.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="Facebook">f</a>
+            <a href="#" class="social-icon" aria-label="Twitter">t</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="cart.html">Cart</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="#">Abstract</a></li>
+              <li><a href="#">Landscape</a></li>
+              <li><a href="#">Portrait</a></li>
+              <li><a href="#">Modern</a></li>
+              <li><a href="#">Photography</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:info@artattract.com">info@artattract.com</a></li>
+              <li><a href="tel:+441234567">+44-123-4567</a></li>
+              <li><a href="#">45 Royal Mile, Edinburgh, EH1 2NG, Scotland, UK</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Art Attract. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLeft = document.querySelector('.nav-left');
+    const navRight = document.querySelector('.nav-right');
+    navToggle.addEventListener('click', function() {
+      navLeft.classList.toggle('active');
+      navRight.classList.toggle('active');
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+    });
+    function addToCart() {
+      alert('Item added to cart!');
+    }
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.pageYOffset;
+      const hero = document.querySelector('.hero');
+      const quoteSection = document.querySelector('.quote-section');
+      if (hero) {
+        hero.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+      }
+      if (quoteSection) {
+        quoteSection.style.backgroundPositionY = (scrollPosition - quoteSection.offsetTop) * 0.5 + 'px';
+      }
+    });
+    document.addEventListener('click', function(event) {
+      if (!navLeft.contains(event.target) && !navRight.contains(event.target) && event.target !== navToggle) {
+        navLeft.classList.remove('active');
+        navRight.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>

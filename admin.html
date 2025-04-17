@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Art Attract</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav-left">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+      <div class="logo">
+        <h1>Art Attract</h1>
+        <p class="tagline">Premium Art Delivered to Your Door</p>
+      </div>
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
+      <div class="nav-right">
+        <ul>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="admin-dashboard">
+    <h2>Admin Dashboard</h2>
+    <div class="admin-panel">
+      <aside class="admin-sidebar">
+        <nav class="admin-menu">
+          <ul>
+            <li><a id="openAddProduct" href="javascript:void(0);">Add New Product</a></li>
+            <li class="active"><a href="#products">Products</a></li>
+            <li><a href="#orders">Orders</a></li>
+            <li><a href="#customers">Customers</a></li>
+            <li><a href="#settings">Settings</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <section class="admin-content">
+        <section id="add-product-form" class="admin-form" hidden>
+          <h4>Add New Product</h4>
+          <form onsubmit="alert('Product would be added here!'); return false;">
+            <div class="form-group">
+              <label for="product-name">Product Name</label>
+              <input type="text" id="product-name" required>
+            </div>
+            <div class="form-group">
+              <label for="product-description">Description</label>
+              <textarea id="product-description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="product-price">Price (£)</label>
+              <input type="number" id="product-price" min="0" step="0.01" required>
+            </div>
+            <div class="form-group">
+              <label for="product-category">Category</label>
+              <select id="product-category" required>
+                <option value="">Select a category</option>
+                <option value="abstract">Abstract</option>
+                <option value="landscape">Landscape</option>
+                <option value="portrait">Portrait</option>
+                <option value="modern">Modern</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="product-image">Image URL</label>
+              <input type="text" id="product-image" placeholder="images/abstract.jpg" required>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Add Product</button>
+              <button type="button" class="btn btn-outline" id="closeAddProduct">Cancel</button>
+            </div>
+          </form>
+        </section>
+        <section class="admin-table">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>001</td>
+                <td><img src="images/abstract.jpg" alt="Abstract Cityscape" class="thumbnail"></td>
+                <td>Abstract Cityscape</td>
+                <td>£149.99</td>
+                <td>Abstract</td>
+                <td>
+                  <button class="btn btn-small" onclick="alert('Edit product form would open here!')">Edit</button>
+                  <button class="btn btn-small btn-danger" onclick="alert('Product would be deleted here!')">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>002</td>
+                <td><img src="images/forest_lost.jpeg" alt="Serene Nature" class="thumbnail"></td>
+                <td>Serene Nature</td>
+                <td>£129.99</td>
+                <td>Landscape</td>
+                <td>
+                  <button class="btn btn-small" onclick="alert('Edit product form would open here!')">Edit</button>
+                  <button class="btn btn-small btn-danger" onclick="alert('Product would be deleted here!')">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>003</td>
+                <td><img src="images/metropolis.jpeg" alt="Urban Dreams" class="thumbnail"></td>
+                <td>Urban Dreams</td>
+                <td>£179.99</td>
+                <td>Modern</td>
+                <td>
+                  <button class="btn btn-small" onclick="alert('Edit product form would open here!')">Edit</button>
+                  <button class="btn btn-small btn-danger" onclick="alert('Product would be deleted here!')">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <h3>Art Attract</h3>
+          <p>Premium art delivered to your door. We connect artists with art lovers around the world.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="Facebook">f</a>
+            <a href="#" class="social-icon" aria-label="Twitter">t</a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="cart.html">Cart</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="#">Abstract</a></li>
+              <li><a href="#">Landscape</a></li>
+              <li><a href="#">Portrait</a></li>
+              <li><a href="#">Modern</a></li>
+              <li><a href="#">Photography</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:info@artattract.com">info@artattract.com</a></li>
+              <li><a href="tel:+441234567">+44-123-4567</a></li>
+              <li><a href="#">45 Royal Mile, Edinburgh, EH1 2NG, Scotland, UK</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Art Attract. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function toggleNav() {
+      const navLeft = document.querySelector('.nav-left');
+      const navRight = document.querySelector('.nav-right');
+      navLeft.classList.toggle('active');
+      navRight.classList.toggle('active');
+    }
+    var openAddProductBtn = document.getElementById('openAddProduct');
+    var addProductForm = document.getElementById('add-product-form');
+    openAddProductBtn.addEventListener('click', function(event) {
+      event.stopPropagation();
+      addProductForm.hidden = !addProductForm.hidden;
+    });
+    document.getElementById('closeAddProduct').addEventListener('click', function(event) {
+      addProductForm.hidden = true;
+      event.stopPropagation();
+    });
+    document.addEventListener('click', function(event) {
+      if (!addProductForm.contains(event.target) && event.target !== openAddProductBtn) {
+        addProductForm.hidden = true;
+      }
+    });
+    document.addEventListener('click', function(event) {
+      const navLeft = document.querySelector('.nav-left');
+      const navRight = document.querySelector('.nav-right');
+      const navToggle = document.querySelector('.nav-toggle');
+      if (!navLeft.contains(event.target) &&
+          !navRight.contains(event.target) &&
+          event.target !== navToggle &&
+          (navLeft.classList.contains('active') || navRight.classList.contains('active'))) {
+        navLeft.classList.remove('active');
+        navRight.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
